@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <!--font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!--bootstrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='slide.css')}}">
+
+    
+
+
+
+
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="header">
+        <section class="flex">
+            <a href="/" class="logo"><img src="{{url_for('static',filename='images/logo1.png')}}" alt=""></a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="search categories..." required maxlength="100">
+                <button type="submit" class="fas fa-search" name="search_box"></button>
+
+            </form>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="mani.jpg" alt="browser not supported">
+                <h3>Manikanta Anusuri</h3>
+                <span>student</span>
+                <a href="profile.html" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="/login" class="option-btn">login</a>
+                    <a href="/register" class="option-btn">register</a>
+                </div>
+
+            </div>
+
+        </section>
+    </header>
+    <!-- header section ends -->
+
+    <!-- side bar starts -->
+
+    <div class="side-bar" id="side-bar">
+        <div class="close-side-bar">
+            <button class="btn-b" onclick="b()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="profile">
+            <img src="mani.jpg" alt="">
+            <h3>Manikanta Anusuri</h3>
+            <span>student</span>
+            <a href="profile.html" class="btn">view profile</a>
+        </div>
+        <nav class="navbar">
+            <a class="nav" href="/home"><i class="fas fa-home"><span>HOME</span></i></a>
+            <a class="nav" href="/category"><i class="fas fa-layer-group"><span>CATEGORY</span></i></a>
+            <a class="nav" href="#"><i class="fas fa-book-open-reader"><span>READING</span></i></a>
+            <a class="nav" href="#"><i class="fas fa-question"><span>ABOUT</span></i></a>
+
+        </nav>
+    </div>
+    <!-- side bar ends -->
+
+    <!--categories section starts-->
+
+    <section class="categories">
+        <h1 class="heading">categories</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Animals</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/animals.webp')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Birds</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/birds.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Books & Author</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/books&author.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Computers & Internet</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/cmpr&inrt.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Sports</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/sport.webp')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Religion</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/religions.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Politics</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/politics.png')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Famaous Inventors</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/inventors.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Human Body</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/human-body.webp')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Science And Nature</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/science-nature.avif')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>History</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/History.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Countries Capitals</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/world.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Unit Measurment</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/units.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Geography</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/geography.webp')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Universe</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/universe.avif')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Languages&Linguistics</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/language.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Technology&Innovation</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/technology.jpg')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+            <div class="box">
+                <div class="tutor">
+
+                    <div>
+                        <h3>Art And Culture</h3>
+
+                    </div>
+                </div>
+                <img src="{{url_for('static',filename='images/art&culture.webp')}}" class="thumb" alt="">
+
+                <a href="" class="inline-btn">Play Quiz</a><a href="" class="inline-btn mk">Learn</a>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!--categories section ends-->
+
+
+
+    <!-- footer starts -->
+
+    <footer class="footer">
+        &copy; copyright @ 2024 by <span>quizzz.com</span> | all rights reserved
+
+    </footer>
+    <!--footer ends-->
+    <script src="/static/m1.js"></script>
+</body>
+
+</html>
+
+
+
+
+    
+
+</body>
+</html>

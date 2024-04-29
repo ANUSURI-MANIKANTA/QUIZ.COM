@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <!--font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='reg.css')}}">
+
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="header">
+        <section class="flex">
+            <a href="/home" class="logo">quizzz.com</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="search categories..." required maxlength="100">
+                <button type="submit" class="fas fa-search" name="search_box"></button>
+
+            </form>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="mani.jpg" alt="browser not supported">
+                <h3>Manikanta Anusuri</h3>
+                <span>student</span>
+                <a href="profile.html" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="/login" class="option-btn">login</a>
+                    <a href="/register" class="option-btn">register</a>
+                </div>
+
+            </div>
+
+        </section>
+    </header>
+    <!-- header section ends -->
+
+    <!-- side bar starts -->
+
+    <div class="side-bar" id="side-bar">
+        <div class="close-side-bar">
+            <button class="btn-b" onclick="b()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="profile">
+            <img src="mani.jpg" alt="">
+            <h3>Manikanta Anusuri</h3>
+            <span>student</span>
+            <a href="profile.html" class="btn">view profile</a>
+        </div>
+        <nav class="navbar">
+            <a class="nav" href="/login"><i class="fas fa-home"><span>HOME</span></i></a>
+            <a class="nav" href="/category"><i class="fas fa-layer-group"><span>CATEGORY</span></i></a>
+            <a class="nav" href="#"><i class="fas fa-book-open-reader"><span>READING</span></i></a>
+            <a class="nav" href="#"><i class="fas fa-question"><span>ABOUT</span></i></a>
+
+        </nav>
+    </div>
+    <!-- side bar ends -->
+
+    <!--regster section starts-->
+    <section>
+        <section>
+            <div class="container">
+                <form name="f1" id="form" onsubmit="return validate()">
+                    <h1>Register</h1>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="uname" name="uname">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="pwd" name="pwd">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" id="cpwd" name="cpwd">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="image">upload image</label>
+                        <input type="file" id="image" name="image">
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <!--register section ends-->
+
+
+    <script src="{{ url_for('static', filename='validation.js') }}">
+    </script>
+    
+
+    <!-- footer starts -->
+
+    <footer class="footer">
+        &copy; copyright @ 2024 by <span>quizzz.com</span> | all rights reserved
+
+    </footer>
+    <!--footer ends-->
+    <script src="/static/m1.js"></script>
+</body>
+
+</html>
